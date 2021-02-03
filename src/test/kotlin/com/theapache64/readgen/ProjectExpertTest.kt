@@ -31,31 +31,4 @@ class ProjectExpertTest {
             assert(true)
         }
     }
-
-    @Test
-    fun `Given family JAR project, then FamilyJar`() {
-        ProjectExpert.getJarType(
-            File("/home/theapache64/Documents/projects/readgen")
-        ).should.equal(JarType.FAMILY_JAR)
-    }
-
-
-    @Test
-    fun `Given single JAR project, then SingleJar`() {
-        ProjectExpert.getJarType(
-            File("/home/theapache64/Documents/projects/organizer")
-        ).should.equal(JarType.SINGLE_JAR)
-    }
-
-    @Test
-    fun `Given invalid project, then exception`() {
-        try {
-            ProjectExpert.getJarType(
-                File("/home/theapache64/Documents/projects/theapache64")
-            )
-            assert(false)
-        } catch (e: IllegalStateException) {
-            assert(true)
-        }
-    }
 }

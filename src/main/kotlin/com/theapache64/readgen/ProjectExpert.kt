@@ -10,7 +10,6 @@ object ProjectExpert {
 
     private const val PLUGIN_ANDROID = "com.android.tools.build:gradle"
     private const val PLUGIN_KOTLIN = "org.jetbrains.kotlin.jvm"
-    private const val DIR_CORE = "core"
 
     /**
      * To get project type from given project root
@@ -43,18 +42,4 @@ object ProjectExpert {
     }
 
     private fun getGradleFile(projectRoot: File) = projectRoot.resolve("build.gradle")
-
-    /**
-     * To get jar type
-     */
-    @Throws(IllegalStateException::class)
-    fun getJarType(projectRoot: File): JarType {
-        checkIfGradleProject(getGradleFile(projectRoot))
-        val coreDir = projectRoot.resolve(DIR_CORE)
-        return if (coreDir.exists()) {
-            JarType.FAMILY_JAR
-        } else {
-            JarType.SINGLE_JAR
-        }
-    }
 }

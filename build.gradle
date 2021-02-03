@@ -1,6 +1,8 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.10'
 }
+
 
 group 'com.theapache64'
 version 'v1.0.0-alpha01'
@@ -14,6 +16,8 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation 'com.github.kotlin-inquirer:kotlin-inquirer:v0.0.2-alpha'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1'
+
 
     // JUnit : JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck.
     testImplementation 'junit:junit:4.13.1'
