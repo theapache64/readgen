@@ -2,30 +2,31 @@
 
 ![](demo.gif)
 
-
 ## Prerequisites
 
-- Java 8
+- Java 8 or above
 
 ## Installation
 
 <details>
-<summary>Manual Installation</summary>
+<summary><b>Automatic Installation</b></summary> <br/>
 
-1. Download latest `jar` from [releases](https://github.com/${githubUsername}/${projectName}/releases/latest/download/${projectName}.main.jar) 
-1. Run `java -jar ${projectName}.main.jar`
+Coming soon
+
 </details>
 
 <details>
-<summary>Automatic Installation</summary>
+<summary><b>Manual Installation</b></summary> <br/>
 
-Coming soon
+1. Download latest `jar` from [releases](https://github.com/{{githubUsername}}/{{projectName}}/releases/latest/download/{{projectName}}.main.jar) 
+1. Run `java -jar {{projectName}}.main.jar`
+
 </details>
 
 ## Usage
 
-```sh
-${usage}
+```shell script
+~$ java -jar {{projectName}}.main.jar
 ```
 
 ## Run tests

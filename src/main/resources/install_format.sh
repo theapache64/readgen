@@ -1,18 +1,12 @@
 echo "Downloading main JAR..." &&
-wget -q "https://github.com/${AUTHOR_NAME}/${REPO_NAME}/releases/latest/download/gpm.main.jar" -O "gpm.main.jar" --show-progress &&
-# cp /home/theapache64/Documents/projects/gpm/gpm.main.jar gpm.main.jar &&
+wget -q "https://github.com/${githubUsername}/${projectName}/releases/latest/download/${projectName}.main.jar" -O "${projectName}.main.jar" --show-progress &&
 
-echo "Downloading autocompletion script..." &&
-wget -q "https://github.com/theapache64/gpm/releases/latest/download/gpm_completion" -O "gpm_completion" --show-progress &&
+echo "Moving files to ~/.${projectName}" &&
 
-echo "Moving files to ~/.gmp" &&
-
-mkdir -p ~/.gpm &&
-mv gpm.main.jar ~/.gpm/gpm.main.jar &&
-mv gpm_completion ~/.gpm/gpm_completion &&
+mkdir -p ~/.${projectName} &&
+mv ${projectName}.main.jar ~/.${projectName}/${projectName}.main.jar
 
 echo "Installing..." &&
-echo "alias gpm='java -jar ~/.gpm/gpm.main.jar'" >> ~/.bashrc &&
-echo ". ~/.gpm/gpm_completion" >> ~/.bashrc &&
+echo "alias ${projectName}='java -jar ~/.${projectName}/${projectName}.main.jar'" >> ~/.bashrc &&
 
 echo "Done"

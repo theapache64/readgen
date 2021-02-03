@@ -1,5 +1,6 @@
-package com.theapache64.readgen
+package com.theapache64.readgen.utils
 
+import com.theapache64.readgen.Main
 import java.io.File
 
 fun String.toFile(): File {

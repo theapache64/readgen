@@ -1,6 +1,8 @@
 package com.theapache64.readgen
 
 import com.theapache64.expekt.should
+import com.theapache64.readgen.core.ProjectExpert
+import com.theapache64.readgen.model.ProjectType
 import org.junit.Test
 import java.io.File
 

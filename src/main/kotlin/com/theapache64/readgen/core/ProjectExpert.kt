@@ -1,5 +1,6 @@
-package com.theapache64.readgen
+package com.theapache64.readgen.core
 
+import com.theapache64.readgen.model.ProjectType
 import java.io.File
 
 
