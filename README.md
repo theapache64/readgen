@@ -6,7 +6,7 @@
     <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> A simple tool to generate README
+> A simple tool
 
 ### ✨ Demo
 
