@@ -17,4 +17,6 @@ data class Config(
     val patronUsername: String,
     @SerialName("buymecoffee_username")
     val buyMeCoffeeUsername: String,
+    @SerialName("paypal_username")
+    val paypalUsername: String,
 )

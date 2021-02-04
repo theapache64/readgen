@@ -8,8 +8,10 @@
 
 ## 🛠 Installation
 
-<details>
+<details open="open">
 <summary><b>Automatic Installation</b></summary> <br/>
+
+Copy paste below line into your terminal.
 
 ```shell script
 wget "https://raw.githubusercontent.com/{{githubUsername}}/{{projectName}}/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc

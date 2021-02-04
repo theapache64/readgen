@@ -2,15 +2,14 @@ package com.theapache64.readgen.core
 
 import com.theapache64.expekt.should
 import com.theapache64.readgen.model.Config
-import com.theapache64.readgen.model.ProjectType
 import org.junit.Test
 import java.io.File
 
-class ReadMeManagerTest {
+class InstallScriptManagerTest {
 
     @Test
     fun getGenerated() {
-        val actualOutput = ReadMeManager.getGenerated(
+        val actualOutput = InstallScriptManager.getGenerated(
             Config(
                 "JohnDoe",
                 "myGitHubUsername",
@@ -20,9 +19,7 @@ class ReadMeManagerTest {
                 "myBMCUsername",
                 "myPayPalUsername"
             ),
-            File("/home/theapache64/Documents/projects/readgen"),
-            ProjectType.JAR,
-            "A simple tool to generate README"
+            File("/home/theapache64/Documents/projects/readgen")
         )
 
         actualOutput.should.not.contain("{{")

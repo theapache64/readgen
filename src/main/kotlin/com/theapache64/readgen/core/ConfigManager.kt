@@ -30,7 +30,8 @@ object ConfigManager {
             twitterUsername = "ENTER_YOUR_TWITTER_USERNAME_HERE",
             email = "ENTER_YOUR_EMAIL_HERE",
             patronUsername = "ENTER_YOUR_PATRON_USERNAME",
-            buyMeCoffeeUsername = "ENTER_BMC_USERNAME"
+            buyMeCoffeeUsername = "ENTER_BMC_USERNAME",
+            paypalUsername = "ENTER_YOUR_PAYPAL_USERNAME"
         )
         return JsonUtils.json.encodeToString(config)
     }
