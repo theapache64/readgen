@@ -13,11 +13,15 @@ object InstallScriptManager {
     }
 
     fun create(projectDir: File, script: String) {
-        val scriptFile = projectDir.resolve("install.sh")
+        val scriptFile = getInstallationScript(projectDir)
         if (scriptFile.exists()) {
             error("'install.sh' already exist")
         }
         scriptFile.writeText(script)
+    }
+
+    fun getInstallationScript(projectDir: File): File {
+       return projectDir.resolve("install.sh")
     }
 
 }

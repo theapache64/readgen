@@ -5,7 +5,7 @@ import com.theapache64.readgen.utils.*
 import java.io.File
 
 private const val IS_DEBUG = false
-private const val VERSION = "v1.0.0-alpha04"
+private const val VERSION = "v1.0.0-alpha05"
 
 class Main
 
@@ -44,6 +44,15 @@ fun main(args: Array<String>) {
 }
 
 private fun generateReadMe(projectDir: File) {
+
+    if (ReadMeManager.getReadMeFile(projectDir).exists()) {
+        error("README.md already exist")
+    }
+
+    if (InstallScriptManager.getInstallationScript(projectDir).exists()) {
+        error("'install.sh' already exist")
+    }
+
     val projectType = ProjectExpert.getProjectType(projectDir)
     val description = InputUtils.getString("Description", true)
     val config = ConfigManager.getConfig()
@@ -76,10 +85,10 @@ private fun generateReadMe(projectDir: File) {
 }
 
 private fun generateCoverImage(projectDir: File) {
-    println("➡️ Generating cover image... please wait...")
+    println("➡️ Generating cover image... please wait")
     CoverGenerator.generate(projectDir.name)
     println(
         "➡️ Cover image generated. " +
-                "\n\tIf you didn't like the cover, try ${ANSI_GREEN}readgen -c${ANSI_RESET} to generate a new one (-c = cover only)"
+                "If you didn't like the cover, try ${ANSI_GREEN}readgen -c${ANSI_RESET} to generate a new one (-c = cover only)"
     )
 }

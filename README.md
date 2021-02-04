@@ -1,5 +1,4 @@
-![](extras/cover.jpeg)
-
+![](cover.jpeg)
 # readgen
 
 ![buildStatus](https://img.shields.io/github/workflow/status/theapache64/readgen/Java%20CI%20with%20Gradle?style=plastic)
@@ -8,11 +7,11 @@
     <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> A simple tool to generate README
+> Tired of creating README,I got you covered.
 
 ### ✨ Demo
 
-![](https://i.imgur.com/aQEtOja.png)
+![](demo.gif)
 
 ## 🦿 Prerequisites
 
@@ -60,8 +59,17 @@ Feel free to ping me 😉
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-Feel free to check [issues page](You can also take a look at the [contributing guide](CONTRIBUTING.md))
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
+Any contributions you make are **greatly appreciated**.  
+
+1. Open an issue first to discuss what you would like to change.
+1. Fork the Project
+1. Create your feature branch (`git checkout -b feature/amazing-feature`)
+1. Commit your changes (`git commit -m 'Add some amazing feature'`)
+1. Push to the branch (`git push origin feature/amazing-feature`)
+1. Open a pull request
+
+Please make sure to update tests as appropriate.
 
 ## ❤ Show your support
 

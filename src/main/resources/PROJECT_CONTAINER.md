@@ -25,10 +25,10 @@ Any contributions you make are **greatly appreciated**.
 
 1. Open an issue first to discuss what you would like to change.
 1. Fork the Project
-1. Create your Feature Branch (`git checkout -b feature/amazing-feature`)
-1. Commit your Changes (`git commit -m 'Add some amazing feature'`)
-1. Push to the Branch (`git push origin feature/amazing-feature`)
-1. Open a Pull Request
+1. Create your feature branch (`git checkout -b feature/amazing-feature`)
+1. Commit your changes (`git commit -m 'Add some amazing feature'`)
+1. Push to the branch (`git push origin feature/amazing-feature`)
+1. Open a pull request
 
 Please make sure to update tests as appropriate.
 

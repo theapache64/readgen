@@ -13,7 +13,7 @@ object CoverGenerator {
     private const val HEIGHT = 450
     private const val FONT_SIZE = 130f
     private const val RANDOM_IMAGE_URL = "https://source.unsplash.com/random/${WIDTH}x${HEIGHT}?nature"
-    private val transBlack by lazy { Color(0, 0, 0, 180) }
+    private val transBlack by lazy { Color(0, 0, 0, 130) }
 
 
     private val coverFont by lazy {

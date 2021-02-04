@@ -52,9 +52,13 @@ object ReadMeManager {
     }
 
     fun create(projectDir: File, content: String) {
-        val readMeFile = projectDir.resolve("README.md")
+        val readMeFile = getReadMeFile(projectDir)
         require(readMeFile.exists().not()) { "README.md already exist" }
         readMeFile.writeText(content)
+    }
+
+    fun getReadMeFile(projectDir: File): File {
+        return projectDir.resolve("README.md")
     }
 
 }
