@@ -5,13 +5,18 @@ import com.theapache64.readgen.core.InstallScriptManager
 import com.theapache64.readgen.core.ProjectExpert
 import com.theapache64.readgen.core.ReadMeManager
 import com.theapache64.readgen.utils.InputUtils
+import com.theapache64.readgen.utils.JarUtils
 import com.theapache64.readgen.utils.toFile
 
 private const val IS_DEBUG = true
+private const val VERSION = "v1.0.0-alpha03"
 
 class Main
 
+@Suppress("UNUSED_PARAMETER")
 fun main(args: Array<String>) {
+    println("📄 ReadMeGen: $VERSION")
+    println("---------------------------")
 
     if (ConfigManager.isConfigExist()) {
         val projectDir = if (IS_DEBUG) {
@@ -51,9 +56,10 @@ fun main(args: Array<String>) {
             ➡️️ No config file found. 
             ➡️️ Creating config file...
             ➡️️ Config file created.
-            Edit config.json and try again 
+            Edit config.json (${JarUtils.getJarDir()}config.json) and try again 
         """.trimIndent()
         )
         ConfigManager.createConfig()
+        ConfigManager.openConfig()
     }
 }

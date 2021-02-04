@@ -5,6 +5,7 @@ import com.theapache64.readgen.utils.JarUtils
 import com.theapache64.readgen.utils.JsonUtils
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
+import java.awt.Desktop
 import java.io.File
 
 object ConfigManager {
@@ -38,6 +39,10 @@ object ConfigManager {
 
     fun getConfig(): Config {
         return JsonUtils.json.decodeFromString(configFile.readText())
+    }
+
+    fun openConfig() {
+        Desktop.getDesktop().open(configFile)
     }
 
 }
