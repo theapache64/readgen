@@ -6,7 +6,7 @@
     <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> Something
+> A simple tool to generate README
 
 ### ✨ Demo
 
@@ -18,8 +18,10 @@
 
 ## 🛠 Installation
 
-<details>
+<details open="open">
 <summary><b>Automatic Installation</b></summary> <br/>
+
+Copy paste below line into your terminal.
 
 ```shell script
 wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
@@ -68,6 +70,11 @@ Give a ⭐️ if this project helped you!
 <a href="https://www.buymeacoffee.com/theapache64" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
 </a>
+
+<a href="https://www.paypal.me/{{paypalUsername}}" target="_blank">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
+</a>
+
 
 ## ☑️ TODO
 
