@@ -20,6 +20,7 @@ object ReadMeManager {
     private const val KEY_PATRON_USERNAME = "{{patronUsername}}"
     private const val KEY_EMAIL = "{{email}}"
     private const val KEY_BUYMECOFFEE_USERNAME = "{{buyMeCoffeeUsername}}"
+    private const val KEY_PAYPAL_USERNAME = "{{paypalUsername}}"
     private const val KEY_CURRENT_YEAR = "{{currentYear}}"
 
     fun getGenerated(
@@ -46,6 +47,7 @@ object ReadMeManager {
             .replace(KEY_PATRON_USERNAME, config.patronUsername)
             .replace(KEY_EMAIL, config.email)
             .replace(KEY_BUYMECOFFEE_USERNAME, config.buyMeCoffeeUsername)
+            .replace(KEY_PAYPAL_USERNAME, config.paypalUsername)
             .replace(KEY_CURRENT_YEAR, Calendar.getInstance().get(Calendar.YEAR).toString())
     }
 

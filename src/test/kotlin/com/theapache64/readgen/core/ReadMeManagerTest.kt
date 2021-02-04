@@ -20,7 +20,7 @@ class ReadMeManagerTest {
                 "myBMCUsername",
                 "myPayPalUsername"
             ),
-            File("/home/theapache64/Documents/projects/readgen"),
+            File("readgen"),
             ProjectType.JAR,
             "A simple tool to generate README"
         )
