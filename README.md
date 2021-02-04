@@ -7,7 +7,7 @@
     <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> Tired of creating README,I got you covered.
+> Tired of creating README? I got you covered.
 
 ### ✨ Demo
 
@@ -90,6 +90,7 @@ Give a ⭐️ if this project helped you!
 
 ## ☑️ TODO
 
+- [ ] Add more cover image styles with different fonts
 - [ ] Support Android projects
 - [ ] Support SpringBoot projects
 
