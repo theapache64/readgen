@@ -11,7 +11,6 @@ import javax.imageio.ImageIO
 object CoverGenerator {
     private const val WIDTH = 1500
     private const val HEIGHT = 450
-    private const val FONT_SIZE = 130f
     private const val RANDOM_IMAGE_URL = "https://source.unsplash.com/random/${WIDTH}x${HEIGHT}?nature"
     private val transBlack by lazy { Color(0, 0, 0, 130) }
 
@@ -22,13 +21,20 @@ object CoverGenerator {
     }
 
 
-    fun generate(projectName: String): File {
+    fun generate(projectName: String, fontSize: Int, customFont: String?): File {
         // Download image
         val image = downloadImage()
-        return draw(image, projectName)
+        return draw(image, projectName, fontSize, customFont)
     }
 
-    fun draw(inputFile: File, text: String): File {
+    fun draw(
+        inputFile: File,
+        text: String,
+        _fontSize: Int,
+        customFont: String?,
+        isFromTest: Boolean = false
+    ): File {
+        val fontSize = _fontSize.toFloat()
         val inputImage = ImageIO.read(inputFile)
 
         return inputImage.createGraphics().let { canvas ->
@@ -46,7 +52,14 @@ object CoverGenerator {
             canvas.fillRect(0, 0, inputImage.width, inputImage.height)
 
             // Title font size
-            val font = coverFont.deriveFont(Font.PLAIN, FONT_SIZE)
+            val font = if (customFont == null) {
+                // get default font
+                coverFont.deriveFont(Font.PLAIN, fontSize)
+            } else {
+                Font.createFont(Font.TRUETYPE_FONT, File(customFont))
+                    .deriveFont(Font.PLAIN, fontSize)
+            }
+
             canvas.font = font
             val metrics = canvas.fontMetrics
 
@@ -62,7 +75,11 @@ object CoverGenerator {
             // Saving cover
             val outputFile = File("cover.jpeg")
             ImageIO.write(inputImage, "jpeg", outputFile)
-            inputFile.delete()
+
+            if (isFromTest.not()) {
+                inputFile.delete()
+            }
+
             outputFile
         }
     }

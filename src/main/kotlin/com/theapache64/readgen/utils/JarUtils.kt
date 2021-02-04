@@ -1,6 +1,6 @@
 package com.theapache64.readgen.utils
 
-import com.theapache64.readgen.Main
+import com.theapache64.readgen.ReadGenCommand
 import java.io.File
 
 object JarUtils {
@@ -8,7 +8,7 @@ object JarUtils {
     fun getJarDir(): String {
 
         val jarDir = File(
-            Main::class.java.protectionDomain.codeSource.location
+            ReadGenCommand::class.java.protectionDomain.codeSource.location
                 .toURI()
         ).parent
 

@@ -1,18 +1,21 @@
 ![](cover.jpeg)
+
 # {{projectName}}
 
 ![buildStatus](https://img.shields.io/github/workflow/status/{{githubUsername}}/{{projectName}}/Java%20CI%20with%20Gradle?style=plastic)
 ![latestVersion](https://img.shields.io/github/v/release/{{githubUsername}}/{{projectName}})
 <a href="https://twitter.com/{{twitterUsername}}" target="_blank">
-    <img alt="Twitter: {{twitterUsername}}" src="https://img.shields.io/twitter/follow/{{twitterUsername}}.svg?style=social" />
+<img alt="Twitter: {{twitterUsername}}" src="https://img.shields.io/twitter/follow/{{twitterUsername}}.svg?style=social" />
 </a>
 
 > {{projectDescription}}
 
 {{typeContent}}
 
-## ✍️ Author 
+## ✍️ Author
+
 👤 **{{authorName}}**
+
 * Twitter: <a href="https://twitter.com/{{twitterUsername}}" target="_blank">@{{twitterUsername}}</a>
 * Email: {{email}}
 
@@ -20,8 +23,8 @@ Feel free to ping me 😉
 
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
-Any contributions you make are **greatly appreciated**.  
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
 
 1. Open an issue first to discuss what you would like to change.
 1. Fork the Project
@@ -47,7 +50,6 @@ Give a ⭐️ if this project helped you!
 <a href="https://www.paypal.me/{{paypalUsername}}" target="_blank">
     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
 </a>
-
 
 ## ☑️ TODO
 

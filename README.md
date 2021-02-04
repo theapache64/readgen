@@ -1,10 +1,11 @@
 ![](cover.jpeg)
+
 # readgen
 
 ![buildStatus](https://img.shields.io/github/workflow/status/theapache64/readgen/Java%20CI%20with%20Gradle?style=plastic)
 ![latestVersion](https://img.shields.io/github/v/release/theapache64/readgen)
 <a href="https://twitter.com/theapache64" target="_blank">
-    <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
+<img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
 > Tired of creating README? I got you covered.
@@ -33,7 +34,8 @@ wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -
 <details>
 <summary><b>Manual Installation</b></summary> <br/>
 
-1. Download latest `jar` from [releases](https://github.com/theapache64/readgen/releases/latest/download/readgen.main.jar) 
+1. Download latest `jar`
+   from [releases](https://github.com/theapache64/readgen/releases/latest/download/readgen.main.jar)
 1. Run `java -jar readgen.main.jar`
 
 </details>
@@ -58,8 +60,10 @@ wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -
 ./gradlew test
 ```
 
-## ✍️ Author 
+## ✍️ Author
+
 👤 **theapache64**
+
 * Twitter: <a href="https://twitter.com/theapache64" target="_blank">@theapache64</a>
 * Email: theapache64@gmail.com
 
@@ -67,8 +71,8 @@ Feel free to ping me 😉
 
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
-Any contributions you make are **greatly appreciated**.  
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
 
 1. Open an issue first to discuss what you would like to change.
 1. Fork the Project
@@ -94,7 +98,6 @@ Give a ⭐️ if this project helped you!
 <a href="https://www.paypal.me/theapache64" target="_blank">
     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
 </a>
-
 
 ## ☑️ TODO
 

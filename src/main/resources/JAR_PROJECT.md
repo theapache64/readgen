@@ -22,7 +22,8 @@ wget "https://raw.githubusercontent.com/{{githubUsername}}/{{projectName}}/maste
 <details>
 <summary><b>Manual Installation</b></summary> <br/>
 
-1. Download latest `jar` from [releases](https://github.com/{{githubUsername}}/{{projectName}}/releases/latest/download/{{projectName}}.main.jar) 
+1. Download latest `jar`
+   from [releases](https://github.com/{{githubUsername}}/{{projectName}}/releases/latest/download/{{projectName}}.main.jar)
 1. Run `java -jar {{projectName}}.main.jar`
 
 </details>

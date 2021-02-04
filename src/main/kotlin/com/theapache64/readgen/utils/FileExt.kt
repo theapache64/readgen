@@ -1,6 +1,6 @@
 package com.theapache64.readgen.utils
 
-import com.theapache64.readgen.Main
+import com.theapache64.readgen.ReadGenCommand
 import java.io.File
 
 fun String.toFile(): File {
@@ -8,5 +8,5 @@ fun String.toFile(): File {
 }
 
 fun getResource(fileName: String): String {
-    return Main::class.java.getResource("/$fileName").readText()
+    return ReadGenCommand::class.java.getResource("/$fileName").readText()
 }

@@ -21,7 +21,7 @@ object InstallScriptManager {
     }
 
     fun getInstallationScript(projectDir: File): File {
-       return projectDir.resolve("install.sh")
+        return projectDir.resolve("install.sh")
     }
 
 }
