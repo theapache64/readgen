@@ -40,8 +40,16 @@ wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -
 
 ## ⌨️ Usage
 
+- To generate README.md, install.sh and cover image
+
 ```shell script
 ~$ readgen
+```
+
+- To generate cover image alone
+
+```shell script
+~$ readgen -c
 ```
 
 ## 🥼 Run tests
