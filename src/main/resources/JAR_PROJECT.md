@@ -2,16 +2,18 @@
 
 ![](demo.gif)
 
-## Prerequisites
+## 🦿 Prerequisites
 
 - Java 8 or above
 
-## Installation
+## 🛠 Installation
 
 <details>
 <summary><b>Automatic Installation</b></summary> <br/>
 
-Coming soon
+```shell script
+wget "https://raw.githubusercontent.com/{{githubUsername}/{{projectName}}/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
+```
 
 </details>
 
@@ -23,13 +25,13 @@ Coming soon
 
 </details>
 
-## Usage
+## ⌨️ Usage
 
 ```shell script
-~$ java -jar {{projectName}}.main.jar
+~$ {{projectName}}
 ```
 
-## Run tests
+## 🥼 Run tests
 
 ```shell script
 ./gradlew test

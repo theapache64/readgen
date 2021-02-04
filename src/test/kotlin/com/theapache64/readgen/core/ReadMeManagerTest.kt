@@ -6,11 +6,11 @@ import com.theapache64.readgen.model.ProjectType
 import org.junit.Test
 import java.io.File
 
-class ReadMeGeneratorTest {
+class ReadMeManagerTest {
 
     @Test
     fun getGenerated() {
-        val actualOutput = ReadMeGenerator.getGenerated(
+        val actualOutput = ReadMeManager.getGenerated(
             Config(
                 "JohnDoe",
                 "myGitHubUsername",

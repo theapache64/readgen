@@ -6,16 +6,16 @@ import com.theapache64.readgen.utils.getResource
 import java.io.File
 import java.util.*
 
-object ReadMeGenerator {
+object ReadMeManager {
 
     private const val TEMPLATE_PROJECT_CONTAINER = "PROJECT_CONTAINER.md"
     private const val TEMPLATE_JAR_PROJECT = "JAR_PROJECT.md"
 
     private const val KEY_AUTHOR_NAME = "{{authorName}}"
-    private const val KEY_PROJECT_NAME = "{{projectName}}"
+    const val KEY_PROJECT_NAME = "{{projectName}}"
     private const val KEY_PROJECT_DESC = "{{projectDescription}}"
     private const val KEY_TYPE_CONTENT = "{{typeContent}}"
-    private const val KEY_GITHUB_USERNAME = "{{githubUsername}}"
+    const val KEY_GITHUB_USERNAME = "{{githubUsername}}"
     private const val KEY_TWITTER_USERNAME = "{{twitterUsername}}"
     private const val KEY_PATRON_USERNAME = "{{patronUsername}}"
     private const val KEY_EMAIL = "{{email}}"
@@ -47,6 +47,12 @@ object ReadMeGenerator {
             .replace(KEY_EMAIL, config.email)
             .replace(KEY_BUYMECOFFEE_USERNAME, config.buyMeCoffeeUsername)
             .replace(KEY_CURRENT_YEAR, Calendar.getInstance().get(Calendar.YEAR).toString())
+    }
+
+    fun create(projectDir: File, content: String) {
+        val readMeFile = projectDir.resolve("README.md")
+        require(readMeFile.exists().not()) { "README.md already exist" }
+        readMeFile.writeText(content)
     }
 
 }
