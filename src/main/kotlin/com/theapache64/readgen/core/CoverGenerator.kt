@@ -49,15 +49,17 @@ object CoverGenerator {
             val font = coverFont.deriveFont(Font.PLAIN, FONT_SIZE)
             canvas.font = font
             val metrics = canvas.fontMetrics
+
+            // Finding center
             val x: Int = (inputImage.width - metrics.stringWidth(text)) / 2
-            // Determine the Y coordinate for the text (note we add the ascent, as in java 2d 0 is top of the screen)
-            // Determine the Y coordinate for the text (note we add the ascent, as in java 2d 0 is top of the screen)
             val y: Int = (inputImage.height - metrics.height) / 2 + metrics.ascent
 
             canvas.paint = Color.WHITE
             canvas.drawString(text, x, y)
 
             canvas.dispose()
+
+            // Saving cover
             val outputFile = File("cover.jpeg")
             ImageIO.write(inputImage, "jpeg", outputFile)
             inputFile.delete()
