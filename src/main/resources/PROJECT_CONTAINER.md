@@ -19,8 +19,17 @@ Feel free to ping me 😉
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-Feel free to check [issues page](You can also take a look at the [contributing guide](CONTRIBUTING.md))
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
+Any contributions you make are **greatly appreciated**.  
+
+1. Open an issue first to discuss what you would like to change.
+1. Fork the Project
+1. Create your Feature Branch (`git checkout -b feature/amazing-feature`)
+1. Commit your Changes (`git commit -m 'Add some amazing feature'`)
+1. Push to the Branch (`git push origin feature/amazing-feature`)
+1. Open a Pull Request
+
+Please make sure to update tests as appropriate.
 
 ## ❤ Show your support
 
