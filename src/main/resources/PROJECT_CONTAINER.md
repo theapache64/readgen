@@ -1,3 +1,4 @@
+![](cover.jpeg)
 # {{projectName}}
 
 ![buildStatus](https://img.shields.io/github/workflow/status/{{githubUsername}}/{{projectName}}/Java%20CI%20with%20Gradle?style=plastic)

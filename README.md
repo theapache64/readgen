@@ -1,3 +1,5 @@
+![](extras/cover.jpeg)
+
 # readgen
 
 ![buildStatus](https://img.shields.io/github/workflow/status/theapache64/readgen/Java%20CI%20with%20Gradle?style=plastic)
