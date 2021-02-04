@@ -6,7 +6,7 @@
     <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> A simple tool
+> Something
 
 ### ✨ Demo
 
@@ -22,7 +22,7 @@
 <summary><b>Automatic Installation</b></summary> <br/>
 
 ```shell script
-wget "https://raw.githubusercontent.com/{{githubUsername}/readgen/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
+wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
 ```
 
 </details>

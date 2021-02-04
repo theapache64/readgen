@@ -1,12 +1,12 @@
 echo "Downloading main JAR..." &&
-wget -q "https://github.com/${githubUsername}/${projectName}/releases/latest/download/${projectName}.main.jar" -O "${projectName}.main.jar" --show-progress &&
+wget -q "https://github.com/theapache64/readgen/releases/latest/download/readgen.main.jar" -O "readgen.main.jar" --show-progress &&
 
-echo "Moving files to ~/.${projectName}" &&
+echo "Moving files to ~/.readgen" &&
 
-mkdir -p ~/.${projectName} &&
-mv ${projectName}.main.jar ~/.${projectName}/${projectName}.main.jar
+mkdir -p ~/.readgen &&
+mv readgen.main.jar ~/.readgen/readgen.main.jar
 
 echo "Installing..." &&
-echo "alias ${projectName}='java -jar ~/.${projectName}/${projectName}.main.jar'" >> ~/.bashrc &&
+echo "alias readgen='java -jar ~/.readgen/readgen.main.jar'" >> ~/.bashrc &&
 
 echo "Done"

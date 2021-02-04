@@ -12,7 +12,7 @@
 <summary><b>Automatic Installation</b></summary> <br/>
 
 ```shell script
-wget "https://raw.githubusercontent.com/{{githubUsername}/{{projectName}}/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
+wget "https://raw.githubusercontent.com/{{githubUsername}}/{{projectName}}/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
 ```
 
 </details>
