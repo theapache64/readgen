@@ -8,14 +8,14 @@ import com.theapache64.readgen.utils.InputUtils
 import com.theapache64.readgen.utils.JarUtils
 import com.theapache64.readgen.utils.toFile
 
-private const val IS_DEBUG = true
-private const val VERSION = "v1.0.0-alpha03"
+private const val IS_DEBUG = false
+private const val VERSION = "v1.0.0-alpha04"
 
 class Main
 
 @Suppress("UNUSED_PARAMETER")
 fun main(args: Array<String>) {
-    println("📄 ReadMeGen: $VERSION")
+    println("📄 ReadGen: $VERSION")
     println("---------------------------")
 
     if (ConfigManager.isConfigExist()) {
