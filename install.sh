@@ -7,6 +7,6 @@ mkdir -p ~/.readgen &&
 mv readgen.main.jar ~/.readgen/readgen.main.jar
 
 echo "Installing..." &&
-echo "alias readgen='java -jar ~/.readgen/readgen.main.jar'" >> ~/.bashrc &&
+echo "alias readgen='java -jar ~/.readgen/readgen.main.jar'" >> ~/.bash_aliases &&
 
 echo "Done"

@@ -7,6 +7,6 @@ mkdir -p ~/.{{projectName}} &&
 mv {{projectName}}.main.jar ~/.{{projectName}}/{{projectName}}.main.jar
 
 echo "Installing..." &&
-echo "alias {{projectName}}='java -jar ~/.{{projectName}}/{{projectName}}.main.jar'" >> ~/.bashrc &&
+echo "\nalias {{projectName}}='java -jar ~/.{{projectName}}/{{projectName}}.main.jar'" >> ~/.bash_aliases &&
 
 echo "Done"
