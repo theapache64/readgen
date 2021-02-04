@@ -10,7 +10,7 @@
 
 ### ✨ Demo
 
-![](demo.gif)
+![](https://i.imgur.com/aQEtOja.png)
 
 ## 🦿 Prerequisites
 
