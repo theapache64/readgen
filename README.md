@@ -23,7 +23,7 @@
 <details open="open">
 <summary><b>Automatic Installation</b></summary> <br/>
 
-Copy paste below line into your terminal.
+Please copy and paste below line into your terminal.
 
 ```shell script
 wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
@@ -41,6 +41,16 @@ wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -
 </details>
 
 ## ⌨️ Usage
+
+```shell script
+Usage: read-gen [OPTIONS]
+
+Options:
+  -f TEXT     Custom font
+  -s INT      Font size
+  -c          Cover only
+  -h, --help  Show this message and exit
+```
 
 - To generate README.md, install.sh and cover image
 
