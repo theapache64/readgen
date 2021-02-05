@@ -10,6 +10,8 @@ object ReadMeManager {
 
     private const val TEMPLATE_PROJECT_CONTAINER = "PROJECT_CONTAINER.md"
     private const val TEMPLATE_JAR_PROJECT = "JAR_PROJECT.md"
+    private const val TEMPLATE_ANDROID_PROJECT = "ANDROID_PROJECT.md"
+    private const val TEMPLATE_GENERIC_PROJECT = "GENERIC_PROJECT.md"
 
     private const val KEY_AUTHOR_NAME = "{{authorName}}"
     const val KEY_PROJECT_NAME = "{{projectName}}"
@@ -34,7 +36,12 @@ object ReadMeManager {
             ProjectType.JAR -> {
                 getResource(TEMPLATE_JAR_PROJECT)
             }
-            ProjectType.ANDROID -> error("Not Implemented")
+            ProjectType.ANDROID -> {
+                getResource(TEMPLATE_ANDROID_PROJECT)
+            }
+            ProjectType.GENERIC -> {
+                getResource(TEMPLATE_GENERIC_PROJECT)
+            }
         }
 
         return getResource(TEMPLATE_PROJECT_CONTAINER)

@@ -15,7 +15,6 @@ object ProjectExpert {
     /**
      * To get project type from given project root
      */
-    @Throws(IllegalStateException::class)
     fun getProjectType(projectRoot: File): ProjectType {
         val gradleFile = getGradleFile(projectRoot)
         checkIfGradleProject(gradleFile)
@@ -29,11 +28,9 @@ object ProjectExpert {
                 ProjectType.JAR
             }
             else -> {
-                error("Invalid project type")
+                ProjectType.GENERIC
             }
         }
-
-
     }
 
     private fun checkIfGradleProject(gradleFile: File) {
@@ -42,5 +39,11 @@ object ProjectExpert {
         }
     }
 
-    private fun getGradleFile(projectRoot: File) = projectRoot.resolve("build.gradle")
+    private fun getGradleFile(projectRoot: File): File {
+        var gradleFile = projectRoot.resolve("build.gradle")
+        if (gradleFile.exists().not()) {
+            gradleFile = projectRoot.resolve("build.gradle.kts")
+        }
+        return gradleFile
+    }
 }

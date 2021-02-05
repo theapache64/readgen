@@ -12,7 +12,7 @@ class ReadGenCommand : CliktCommand() {
 
     companion object {
         private const val IS_DEBUG = false
-        private const val VERSION = "v1.0.0-alpha06"
+        private const val VERSION = "v1.0.0-alpha07"
         private const val DEFAULT_FONT_SIZE = 130
     }
 
