@@ -17,7 +17,11 @@ object ProjectExpert {
      */
     fun getProjectType(projectRoot: File): ProjectType {
         val gradleFile = getGradleFile(projectRoot)
-        checkIfGradleProject(gradleFile)
+
+        if (gradleFile.exists().not()) {
+            // project is not gradle based. considering it as a normal project.
+            return ProjectType.GENERIC
+        }
 
         val gradleContent = gradleFile.readText()
         return when {
@@ -30,12 +34,6 @@ object ProjectExpert {
             else -> {
                 ProjectType.GENERIC
             }
-        }
-    }
-
-    private fun checkIfGradleProject(gradleFile: File) {
-        if (!gradleFile.exists()) {
-            error("${gradleFile.parentFile.name} is not a gradle project")
         }
     }
 

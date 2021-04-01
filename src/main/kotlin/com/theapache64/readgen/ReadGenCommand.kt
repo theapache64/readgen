@@ -6,13 +6,14 @@ import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.int
 import com.theapache64.readgen.core.*
+import com.theapache64.readgen.model.ProjectType
 import com.theapache64.readgen.utils.*
 
 class ReadGenCommand : CliktCommand() {
 
     companion object {
         private const val IS_DEBUG = false
-        private const val VERSION = "v1.0.0-alpha07"
+        private const val VERSION = "v1.0.0-alpha08"
         private const val DEFAULT_FONT_SIZE = 130
     }
 
@@ -93,16 +94,18 @@ class ReadGenCommand : CliktCommand() {
         println("➡️ README.md created")
 
 
-        // Creating installation script
-        println("➡️ Install script generated")
-        val script = InstallScriptManager.getGenerated(
-            config,
-            projectDir
-        )
+        if (projectType == ProjectType.JAR) {
+            // Creating installation script
+            println("➡️ Install script generated")
+            val script = InstallScriptManager.getGenerated(
+                config,
+                projectDir
+            )
 
 
-        InstallScriptManager.create(projectDir, script)
-        println("➡️ install.sh created")
+            InstallScriptManager.create(projectDir, script)
+            println("➡️ install.sh created")
+        }
 
         // Creating cover image
         generateCoverImage()
