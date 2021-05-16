@@ -8,6 +8,12 @@
 
 ## 🛠 Installation
 
+**Using npm**
+
+```shell
+sudo npm install -g {{projectName}}
+```
+
 <details open="open">
 <summary><b>Automatic Installation</b></summary> <br/>
 
