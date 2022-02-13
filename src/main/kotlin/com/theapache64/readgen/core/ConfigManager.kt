@@ -9,12 +9,13 @@ import java.io.File
 
 object ConfigManager {
 
-    private val configFile by lazy {
-        val home = System.getenv("user.home")
+    val configFile by lazy {
+        val home = System.getProperty("user.home")
         val configFile = File("$home/readgen/config.json")
         if (!configFile.parentFile.exists()) {
             configFile.parentFile.mkdirs()
         }
+
         configFile
     }
 

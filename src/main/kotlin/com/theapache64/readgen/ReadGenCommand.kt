@@ -13,7 +13,7 @@ class ReadGenCommand : CliktCommand() {
 
     companion object {
         private const val IS_DEBUG = false
-        private const val VERSION = "v1.0.2"
+        private const val VERSION = "v1.0.3"
         private const val DEFAULT_FONT_SIZE = 130
     }
 
@@ -61,7 +61,7 @@ class ReadGenCommand : CliktCommand() {
             ➡️️ Creating config file...
             ➡️️ Config file created.
             
-            Edit config.json (${JarUtils.getJarDir()}config.json) and try again 
+            Edit config.json (${ConfigManager.configFile.absolutePath}) and try again 
         """.trimIndent()
             )
             ConfigManager.createConfig()
