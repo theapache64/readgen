@@ -1,7 +1,6 @@
 package com.theapache64.readgen.core
 
 import com.theapache64.readgen.model.Config
-import com.theapache64.readgen.utils.JarUtils
 import com.theapache64.readgen.utils.JsonUtils
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
@@ -11,7 +10,12 @@ import java.io.File
 object ConfigManager {
 
     private val configFile by lazy {
-        File("${JarUtils.getJarDir()}config.json")
+        val home = System.getenv("user.home")
+        val configFile = File("$home/readgen/config.json")
+        if (!configFile.parentFile.exists()) {
+            configFile.parentFile.mkdirs()
+        }
+        configFile
     }
 
     fun isConfigExist(): Boolean {

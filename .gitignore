@@ -151,3 +151,7 @@ gradle-app.setting
 config.json
 
 # End of https://www.toptal.com/developers/gitignore/api/kotlin,intellij,gradle
+node_modules
+package-lock.json
+jdeploy-bundle
+jdeploy

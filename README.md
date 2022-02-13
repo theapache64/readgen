@@ -14,31 +14,11 @@
 
 ![](demo.gif)
 
-## 🦿 Prerequisites
-
-- Java 8 or above
-
 ## 🛠 Installation
 
-<details open="open">
-<summary><b>Automatic Installation</b></summary> <br/>
-
-Please copy and paste below line into your terminal.
-
-```shell script
-wget "https://raw.githubusercontent.com/theapache64/readgen/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
 ```
-
-</details>
-
-<details>
-<summary><b>Manual Installation</b></summary> <br/>
-
-1. Download latest `jar`
-   from [releases](https://github.com/theapache64/readgen/releases/latest/download/readgen.main.jar)
-1. Run `java -jar readgen.main.jar`
-
-</details>
+sudo npm install -g readgen-cli
+```
 
 ## ⌨️ Usage
 
@@ -118,7 +98,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 ```
-Copyright © 2021 - theapache64
+Copyright © 2022 - theapache64
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
