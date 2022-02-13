@@ -12,6 +12,12 @@
 
 {{typeContent}}
 
+## 🏗 Project Status
+
+|![]({{constructionGif}}) |
+|:--:|
+| Under construction |
+
 ## ✍️ Author
 
 👤 **{{authorName}}**

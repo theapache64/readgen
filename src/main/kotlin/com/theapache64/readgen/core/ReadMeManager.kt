@@ -24,6 +24,7 @@ object ReadMeManager {
     private const val KEY_BUYMECOFFEE_USERNAME = "{{buyMeCoffeeUsername}}"
     private const val KEY_PAYPAL_USERNAME = "{{paypalUsername}}"
     private const val KEY_CURRENT_YEAR = "{{currentYear}}"
+    private const val KEY_CONSTRUCTION_GIF = "{{constructionGif}}"
 
     fun getGenerated(
         config: Config,
@@ -47,6 +48,7 @@ object ReadMeManager {
         return getResource(TEMPLATE_PROJECT_CONTAINER)
             .replace(KEY_TYPE_CONTENT, typeContent)
             .replace(KEY_PROJECT_NAME, projectDir.name)
+            .replace(KEY_CONSTRUCTION_GIF, GifManager.constructionGifs.random())
             .replace(KEY_AUTHOR_NAME, config.authorName)
             .replace(KEY_PROJECT_DESC, description)
             .replace(KEY_GITHUB_USERNAME, config.githubUsername)
