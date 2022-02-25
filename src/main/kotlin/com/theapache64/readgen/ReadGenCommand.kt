@@ -30,6 +30,11 @@ class ReadGenCommand : CliktCommand() {
         names = arrayOf("-f")
     )
 
+    private val customTitle: String? by option(
+        help = "Custom title",
+        names = arrayOf("-t")
+    )
+
     private val fontSize: Int by option(
         help = "Font size",
         names = arrayOf("-s")
@@ -85,7 +90,7 @@ class ReadGenCommand : CliktCommand() {
         val config = ConfigManager.getConfig()
         val readMeContent = ReadMeManager.getGenerated(
             config,
-            projectDir,
+            customTitle ?: projectDir.name,
             projectType,
             description
         )
@@ -115,7 +120,7 @@ class ReadGenCommand : CliktCommand() {
 
     private fun generateCoverImage() {
         println("➡️ Generating cover image... please wait")
-        CoverGenerator.generate(projectDir.name, fontSize, customFont)
+        CoverGenerator.generate(customTitle ?: projectDir.name, fontSize, customFont)
         println(
             "➡️ Cover image generated. " +
                     "If you didn't like the cover, try ${ANSI_GREEN}readgen -c$ANSI_RESET to generate a new one (-c = cover only)"
