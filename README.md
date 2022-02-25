@@ -29,6 +29,7 @@ Options:
   -f TEXT     Custom font
   -s INT      Font size
   -c          Cover only
+  -o          Override Readme.md
   -h, --help  Show this message and exit
 ```
 
