@@ -29,7 +29,7 @@ Feel free to ping me 😉
 
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
 1. Open an issue first to discuss what you would like to change.
