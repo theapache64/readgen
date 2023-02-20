@@ -7,19 +7,22 @@ import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.int
 import com.theapache64.readgen.core.*
 import com.theapache64.readgen.model.ProjectType
-import com.theapache64.readgen.utils.*
+import com.theapache64.readgen.utils.ANSI_GREEN
+import com.theapache64.readgen.utils.ANSI_RESET
+import com.theapache64.readgen.utils.InputUtils
+import com.theapache64.readgen.utils.toFile
 
 class ReadGenCommand : CliktCommand() {
 
     companion object {
-        private const val IS_DEBUG = false
+        private const val IS_DEBUG = true
         private const val VERSION = "v1.0.3"
         private const val DEFAULT_FONT_SIZE = 130
     }
 
     private val projectDir by lazy {
         if (IS_DEBUG) {
-            "/home/theapache64/Documents/projects/readgen"
+            "C:\\Users\\paliy\\Documents\\test"
         } else {
             System.getProperty("user.dir")
         }.toFile()
@@ -39,6 +42,11 @@ class ReadGenCommand : CliktCommand() {
         help = "Cover only",
         names = arrayOf("-c")
     ).flag()
+
+    private val isOverrideReadme by option(
+        help = "Override Readme",
+        names = arrayOf("-o")
+    ).flag(default = false)
 
     override fun run() {
 
@@ -72,7 +80,7 @@ class ReadGenCommand : CliktCommand() {
 
     private fun generateReadMe() {
 
-        if (ReadMeManager.getReadMeFile(projectDir).exists()) {
+        if (isOverrideReadme.not() && ReadMeManager.getReadMeFile(projectDir).exists()) {
             error("README.md already exist")
         }
 
@@ -90,7 +98,7 @@ class ReadGenCommand : CliktCommand() {
             description
         )
         println("➡️ README content generated")
-        ReadMeManager.create(projectDir, readMeContent)
+        ReadMeManager.create(projectDir, readMeContent, isOverrideReadme)
         println("➡️ README.md created")
 
 

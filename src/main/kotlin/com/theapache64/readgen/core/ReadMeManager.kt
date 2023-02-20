@@ -60,9 +60,9 @@ object ReadMeManager {
             .replace(KEY_CURRENT_YEAR, Calendar.getInstance().get(Calendar.YEAR).toString())
     }
 
-    fun create(projectDir: File, content: String) {
+    fun create(projectDir: File, content: String, isOverrideReadme: Boolean) {
         val readMeFile = getReadMeFile(projectDir)
-        require(readMeFile.exists().not()) { "README.md already exist" }
+        require(isOverrideReadme || readMeFile.exists().not()) { "README.md already exist" }
         readMeFile.writeText(content)
     }
 
