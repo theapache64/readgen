@@ -28,7 +28,7 @@ object ReadMeManager {
 
     fun getGenerated(
         config: Config,
-        projectDir: File,
+        projectName: String,
         projectType: ProjectType,
         description: String
     ): String {
@@ -47,7 +47,7 @@ object ReadMeManager {
 
         return getResource(TEMPLATE_PROJECT_CONTAINER)
             .replace(KEY_TYPE_CONTENT, typeContent)
-            .replace(KEY_PROJECT_NAME, projectDir.name)
+            .replace(KEY_PROJECT_NAME, projectName)
             .replace(KEY_CONSTRUCTION_GIF, GifManager.constructionGifs.random())
             .replace(KEY_AUTHOR_NAME, config.authorName)
             .replace(KEY_PROJECT_DESC, description)

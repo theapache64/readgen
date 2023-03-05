@@ -4,7 +4,6 @@ import com.theapache64.expekt.should
 import com.theapache64.readgen.model.Config
 import com.theapache64.readgen.model.ProjectType
 import org.junit.Test
-import java.io.File
 
 class ReadMeManagerTest {
 
@@ -20,7 +19,7 @@ class ReadMeManagerTest {
                 "myBMCUsername",
                 "myPayPalUsername"
             ),
-            File("readgen"),
+            "readgen",
             ProjectType.JAR,
             "A simple tool to generate README"
         )
