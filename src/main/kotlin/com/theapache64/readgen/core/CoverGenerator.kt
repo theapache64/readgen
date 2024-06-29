@@ -100,9 +100,7 @@ object CoverGenerator {
     private fun getFinalImageUrl(url: String): String {
         val response = URL(url).readText()
         val unsplashApiResponse : UnsplashApiResponse = JsonUtils.json.decodeFromString(response)
-        return "${unsplashApiResponse.urls.raw}&w=$WIDTH&h=$HEIGHT&fit=crop&crop=entropy".also {
-            println("QuickTag: CoverGenerator:getFinalImageUrl: $it")
-        }
+        return "${unsplashApiResponse.urls.raw}&w=$WIDTH&h=$HEIGHT&fit=crop&crop=entropy"
     }
 
 }
