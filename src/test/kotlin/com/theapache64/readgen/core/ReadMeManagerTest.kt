@@ -18,7 +18,8 @@ class ReadMeManagerTest {
                 "my@email.com",
                 "myPatronUsername",
                 "myBMCUsername",
-                "myPayPalUsername"
+                "myPayPalUsername",
+                "myUnsplashApiKey"
             ),
             File("readgen"),
             ProjectType.JAR,

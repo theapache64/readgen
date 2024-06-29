@@ -19,4 +19,6 @@ data class Config(
     val buyMeCoffeeUsername: String,
     @SerialName("paypal_username")
     val paypalUsername: String,
+    @SerialName("unsplash_api_key")
+    val unsplashApiKey: String,
 )
