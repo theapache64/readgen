@@ -7,7 +7,7 @@ import java.io.File
 class CoverGeneratorTest {
     @Test
     fun generateCover() {
-        val output = CoverGenerator.generate("THIS IS A TEST", 100, null)
+        val output = CoverGenerator.generate("READGEN", 100, null)
         output.exists().should.`true`
     }
 
