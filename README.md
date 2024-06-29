@@ -2,7 +2,6 @@
 
 # readgen
 
-![buildStatus](https://img.shields.io/github/workflow/status/theapache64/readgen/Java%20CI%20with%20Gradle?style=plastic)
 ![latestVersion](https://img.shields.io/github/v/release/theapache64/readgen)
 <a href="https://twitter.com/theapache64" target="_blank">
 <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
