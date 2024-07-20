@@ -22,7 +22,7 @@ class ReadGenCommand : CliktCommand() {
 
     private val projectDir by lazy {
         if (IS_DEBUG) {
-            "C:\\Users\\paliy\\Documents\\test"
+            "/home/theapache64/Documents/projects/readgen"
         } else {
             System.getProperty("user.dir")
         }.toFile()
