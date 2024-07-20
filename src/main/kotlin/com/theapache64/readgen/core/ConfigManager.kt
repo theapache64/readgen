@@ -37,7 +37,8 @@ object ConfigManager {
             email = "ENTER_YOUR_EMAIL_HERE",
             patronUsername = "ENTER_YOUR_PATRON_USERNAME",
             buyMeCoffeeUsername = "ENTER_BMC_USERNAME",
-            paypalUsername = "ENTER_YOUR_PAYPAL_USERNAME"
+            paypalUsername = "ENTER_YOUR_PAYPAL_USERNAME",
+            unsplashApiKey = "PASTE_YOUR_UNSPLASH_API_KEY"
         )
         return JsonUtils.json.encodeToString(config)
     }
