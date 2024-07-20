@@ -15,8 +15,8 @@ import com.theapache64.readgen.utils.toFile
 class ReadGenCommand : CliktCommand() {
 
     companion object {
-        private const val IS_DEBUG = true
-        private const val VERSION = "v1.0.3"
+        private const val IS_DEBUG = false
+        private const val VERSION = "v1.0.5"
         private const val DEFAULT_FONT_SIZE = 130
     }
 
@@ -31,6 +31,11 @@ class ReadGenCommand : CliktCommand() {
     private val customFont: String? by option(
         help = "Custom font",
         names = arrayOf("-f")
+    )
+
+    private val customTitle: String? by option(
+        help = "Custom title",
+        names = arrayOf("-t")
     )
 
     private val fontSize: Int by option(
@@ -93,7 +98,7 @@ class ReadGenCommand : CliktCommand() {
         val config = ConfigManager.getConfig()
         val readMeContent = ReadMeManager.getGenerated(
             config,
-            projectDir,
+            customTitle ?: projectDir.name,
             projectType,
             description
         )
@@ -123,7 +128,7 @@ class ReadGenCommand : CliktCommand() {
 
     private fun generateCoverImage() {
         println("➡️ Generating cover image... please wait")
-        CoverGenerator.generate(projectDir.name, fontSize, customFont)
+        CoverGenerator.generate(customTitle ?: projectDir.name, fontSize, customFont)
         println(
             "➡️ Cover image generated. " +
                     "If you didn't like the cover, try ${ANSI_GREEN}readgen -c$ANSI_RESET to generate a new one (-c = cover only)"

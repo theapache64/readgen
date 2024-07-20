@@ -17,7 +17,8 @@ class InstallScriptManagerTest {
                 "my@email.com",
                 "myPatronUsername",
                 "myBMCUsername",
-                "myPayPalUsername"
+                "myPayPalUsername",
+                "myUnsplashApiKey"
             ),
             File("/home/theapache64/Documents/projects/readgen")
         )

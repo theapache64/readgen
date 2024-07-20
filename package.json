@@ -3,19 +3,24 @@
   "author": "theapache64",
   "description": "A simple CLI tool to generate README",
   "main": "index.js",
-  "preferGlobal": true,
+  "preferGlobal": "true",
   "repository": "https://github.com/theapache64/readgen",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "jar": "readgen.main.jar",
   "jdeploy": {
-    "jdk": false,
+    "jdk": "false",
     "javaVersion": "11",
-    "javafx": false,
-    "title": "Readgen"
+    "javafx": "false",
+    "title": "Readgen",
+    "jar": "readgen.main.jar"
   },
   "dependencies": {
     "njre": "0.2.0",
-    "shelljs": "0.8.4"
+    "shelljs": "^0.8.4",
+    "command-exists-promise": "^2.0.2",
+    "node-fetch": "2.6.7",
+    "tar": "^4.4.8",
+    "yauzl": "^2.10.0"
   },
   "license": "ISC",
   "name": "readgen-cli",
