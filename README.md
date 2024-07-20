@@ -26,6 +26,7 @@ Usage: read-gen [OPTIONS]
 
 Options:
   -f TEXT     Custom font
+  -t TEXT     Custom title
   -s INT      Font size
   -c          Cover only
   -h, --help  Show this message and exit
