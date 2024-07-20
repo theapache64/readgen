@@ -7,7 +7,10 @@ import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.int
 import com.theapache64.readgen.core.*
 import com.theapache64.readgen.model.ProjectType
-import com.theapache64.readgen.utils.*
+import com.theapache64.readgen.utils.ANSI_GREEN
+import com.theapache64.readgen.utils.ANSI_RESET
+import com.theapache64.readgen.utils.InputUtils
+import com.theapache64.readgen.utils.toFile
 
 class ReadGenCommand : CliktCommand() {
 
@@ -45,6 +48,11 @@ class ReadGenCommand : CliktCommand() {
         names = arrayOf("-c")
     ).flag()
 
+    private val isOverrideReadme by option(
+        help = "Override Readme",
+        names = arrayOf("-o")
+    ).flag(default = false)
+
     override fun run() {
 
         println("📄 ReadGen: $VERSION")
@@ -77,7 +85,7 @@ class ReadGenCommand : CliktCommand() {
 
     private fun generateReadMe() {
 
-        if (ReadMeManager.getReadMeFile(projectDir).exists()) {
+        if (isOverrideReadme.not() && ReadMeManager.getReadMeFile(projectDir).exists()) {
             error("README.md already exist")
         }
 
@@ -95,7 +103,7 @@ class ReadGenCommand : CliktCommand() {
             description
         )
         println("➡️ README content generated")
-        ReadMeManager.create(projectDir, readMeContent)
+        ReadMeManager.create(projectDir, readMeContent, isOverrideReadme)
         println("➡️ README.md created")
 
 
